@@ -8,13 +8,14 @@ interface LayoutProps {
    children?: any
 }
 
-export default function Layout(props) {
+export default function Layout(props: LayoutProps) {
     return (
         <div className={`flex h-screen w-screen`}>
              <MenuLateral/>
              <div className={`flex flex-col
-              bg-gray-300
-               w-full p-7`}>
+               w-full p-7  bg-cyan-100  dark:bg-gray-800
+               `}>
+               
              <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo}/>
              <Conteudo>
                  {props.children}
