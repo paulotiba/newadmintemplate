@@ -4,11 +4,11 @@ import useAppData from "../data/hook/useAppData";
 
 export default function Notificacoes() {
 
-  const dados = useAppData()
+  const { alternarTema } = useAppData()
 
   return (
    <Layout titulo="Notificações" subtitulo="Fique Atualizado!">
-     <h3>{dados.nome}</h3>
+     <button onClick={alternarTema}>Claro | Escuro</button>
    </Layout>
   )
 }
